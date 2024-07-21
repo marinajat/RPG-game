@@ -5,21 +5,169 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Adicionei o menu do game e algumas funcionalidades">
-      <change afterPath="$PROJECT_DIR$/src/main/entity/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/entity/NPC_OldMan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/entity/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Life.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/objects/heart_blank.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/objects/heart_full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/objects/heart_half.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_Esqueleto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_Et.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_Gandalf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_Guerreiro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_Menino.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_Princesa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_Templario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_Vampiro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/maps/mapa02-nao-padronizado.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/maps/mapa02.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/maps/mudanca-variaveis-mapa02.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/maps/tiledata-mapa02.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/esqueleto_down_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/esqueleto_down_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/esqueleto_left_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/esqueleto_left_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/esqueleto_right_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/esqueleto_right_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/esqueleto_up_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/esqueleto_up_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/et_down_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/et_down_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/et_left_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/et_left_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/et_right_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/et_right_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/et_up_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/et_up_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/gandalf_down_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/gandalf_down_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/gandalf_left_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/gandalf_left_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/gandalf_right_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/gandalf_right_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/gandalf_up_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/gandalf_up_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/guerreiro_down_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/guerreiro_down_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/guerreiro_left_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/guerreiro_left_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/guerreiro_right_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/guerreiro_right_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/guerreiro_up_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/guerreiro_up_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/menino_down_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/menino_down_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/menino_left_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/menino_left_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/menino_right_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/menino_right_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/menino_up_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/menino_up_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/princesa_down_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/princesa_down_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/princesa_left_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/princesa_left_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/princesa_right_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/princesa_right_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/princesa_up_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/princesa_up_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/templario_down_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/templario_down_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/templario_left_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/templario_left_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/templario_right_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/templario_right_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/templario_up_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/templario_up_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/vampiro_down_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/vampiro_down_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/vampiro_left_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/vampiro_left_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/vampiro_right_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/vampiro_right_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/vampiro_up_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/com-bg/vampiro_up_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/esqueleto_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/esqueleto_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/esqueleto_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/esqueleto_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/esqueleto_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/esqueleto_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/esqueleto_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/esqueleto_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/et_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/et_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/et_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/et_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/et_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/et_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/et_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/et_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/gandalf_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/gandalf_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/gandalf_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/gandalf_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/gandalf_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/gandalf_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/gandalf_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/gandalf_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/guerreiro_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/guerreiro_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/guerreiro_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/guerreiro_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/guerreiro_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/guerreiro_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/guerreiro_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/guerreiro_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/menino_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/menino_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/menino_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/menino_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/menino_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/menino_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/menino_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/menino_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/princesa_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/princesa_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/princesa_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/princesa_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/princesa_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/princesa_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/princesa_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/princesa_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/templario_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/templario_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/templario_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/templario_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/templario_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/templario_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/templario_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/templario_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/vampiro_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/vampiro_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/vampiro_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/vampiro_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/vampiro_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/vampiro_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/vampiro_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/npc/vampiro_up_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/com-bg/player_man_down_1_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/com-bg/player_man_down_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/com-bg/player_man_left_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/com-bg/player_man_left_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/com-bg/player_man_right_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/com-bg/player_man_right_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/com-bg/player_man_up_1-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/com-bg/player_man_up_2-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/player_man_down_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/player_man_down_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/player_man_left_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/player_man_left_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/player_man_right_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/player_man_right_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/player_man_up_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/player/player_man_up_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/NPC_OldMan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/entity/NPC_OldMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_OldMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,29 +215,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TileManager.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rafae/OneDrive/Área de Trabalho/Java/Jogo/src/res/player&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/rafae/OneDrive/Área de Trabalho/Java/Jogo/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Application.TileManager.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/marin/Desktop/RPGgame/jogoPOO",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/rafae/OneDrive/Área de Trabalho/Java/Jogo/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\player" />
@@ -132,6 +286,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -140,6 +302,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714655979987</updated>
+      <workItem from="1721591960457" duration="4909000" />
     </task>
     <task id="LOCAL-00001" summary="Alterando o formato do mapa para mapa &quot;infinito&quot;">
       <option name="closed" value="true" />
@@ -279,6 +442,9 @@
     </task>
     <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
