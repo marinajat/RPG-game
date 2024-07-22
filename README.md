@@ -1,8 +1,10 @@
-<h1>Guardians' Odyssey</h1>
+<h1>The Royal Quest</h1>
 
 <h2>O que é o projeto</h2>
 
-<b>Guardians' Odyssey</b> é um jogo de RPG em turnos desenvolvido em Java, onde os jogadores controlam um grupo de heróis em um mundo de fantasia. Eles exploram mapas, enfrentam inimigos em batalhas por turnos, coletam itens e evoluem seus personagens, tudo enquanto uma história se desenrola com diálogos e eventos. O jogo conta com uma variedade de personagens com habilidades únicas, um sistema de progressão de níveis, gerenciamento de inventário, e uma interface gráfica desenvolvida com Java Swing.
+<b> Este é um jogo desenvolvido para a disciplina de Linguagem de Programação Orientada a Objetos do curso de Engenharia da Computação da POLI/UPE</b>
+- <b> No reino de Labyrinthos, a princesa foi raptada por um minotauro feroz que a mantém prisioneira em uma torre sombria. O jogador, um misterioso homem de terno e óculos, é convocado pelo rei e pela rainha para salvar a princesa. Ele deve atravessar reino, explorando o mapa, passando pelo vilarejo, floresta, comércio, lago, tempo e ponte, conversando com pessoas para obter pistas e enfrentar monstros para coletar as chaves necessárias para entrar na torre onde a princesa está em apuros.</b>
+
 
 <h2>Quais tecnologias foram utilizadas no projeto</h2>
 
@@ -21,7 +23,7 @@
 
 1. <b>Clone o repositório:</b>
 
-- `git clone https://github.com/seuusuario/jogoPOO.git`
+- `git clone https://github.com/marinajat/RPG-game.git`
 
 2. <b>Importe o projeto no Eclipse:</b>
 
@@ -38,7 +40,7 @@
 
 <h3>Estrutura de pastas do projeto</h3>
 
-- jogoPOO/
+- RPG-game/
 - └── src/
 - ├── main/
 - │ └── Main.java
@@ -66,7 +68,15 @@
 
 <h2>Sobre o Jogo</h2>
 
+<b>Objetivo Final</b>
+
+O objetivo do jogo é resgatar a princesa, derrotando os monstros que guardam as chaves pelo reino (mundo 1), atravessando a ponte e enfrentando o minotauro na torre (mundo 2).
+
 -   <b>Personagens:</b> Escolha entre Guerreiro, Mago, Arqueiro e Curandeiro, cada um com habilidades únicas e uma progressão de níveis.
 -   <b>Combate:</b> Enfrente inimigos em batalhas por turnos usando ataques, habilidades e itens.
 -   <b>Exploração:</b> Mova-se pelo mapa, encontre inimigos, descubra tesouros e interaja com o ambiente.
     <b>História:</b> Desfrute de uma narrativa envolvente contada através de diálogos e eventos.
+
+<b>Conclusão</b>
+
+Após coletar todas as chaves e atravessar a ponte derrotando o Vampiro, o jogador entra na torre. No mundo 2, ele é recebido pelo Templário que o orienta a percorrer o labirinto e derrotar o minotauro. Ao derrotar o minotauro, o jogador resgata a princesa e salva o reino de Labyrinthos.
