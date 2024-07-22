@@ -34,7 +34,7 @@ public class NPC_Et extends Entity {
 
     }
 
-    public void setAction() {
+    /*public void setAction() {
 
         actionLockCounter++;
 
@@ -44,7 +44,7 @@ public class NPC_Et extends Entity {
         /* aqui tenho um modelo simples de IA em que 25% do tempo ele vai para cada direção:
         direita, cima, esquerda, baixo
          */
-        if (actionLockCounter == 120) {
+        /*if (actionLockCounter == 120) {
 
             if (i <= 25) {
                 direction = "up";
@@ -58,7 +58,7 @@ public class NPC_Et extends Entity {
             actionLockCounter = 0;
         }
     }
-
+*/
     public void speak() {
         // Posso fazer uma sobrescrita e usar uma fala especifica para o player qualquer
         super.speak();

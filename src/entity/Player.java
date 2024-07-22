@@ -38,7 +38,7 @@ public class Player extends Entity {
     public void setDefaultValues() {
         worldX = gp.tileSize * 25; // posição default do player.
         worldY = gp.tileSize * 21; // quero que o player sempre esteja no centro da tela para que possa ter um mapa
-                                   // maior
+        // maior
         speed = 4;
         direction = "down";
 
@@ -82,6 +82,10 @@ public class Player extends Entity {
             int npcIndex = gp.cChecker.checkEntity(this, gp.npc);
             interactNPC(npcIndex);
 
+            // Checando a colisão dos monstros
+            int monsterIndex = gp.cChecker.checkEntity(this, gp.monster);
+            contactMonster(monsterIndex);
+
             // Checando os eventos
             gp.eHandler.checkEvent();
 
@@ -116,6 +120,13 @@ public class Player extends Entity {
                 spriteCounter = 0;
             }
         }
+        if(invincible == true) {
+            invincibleCounter ++;
+            if(invincibleCounter > 60) {
+                invincible = false;
+                invincibleCounter = 0;
+            }
+        }
     }
 
     public void pickUpObject(int i) {
@@ -130,6 +141,15 @@ public class Player extends Entity {
             if (gp.keyH.enterPressed) {
                 gp.gameState = gp.dialogueState;
                 gp.npc[i].speak();
+            }
+        }
+    }
+
+    public void contactMonster(int i) {
+        if (i != 999) {
+            if(invincible == false) {
+                life -= 1;
+                invincible = true;
             }
         }
     }
@@ -174,6 +194,16 @@ public class Player extends Entity {
                 }
                 break;
         }
+
+        if(invincible) {
+            g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.3f));
+        }
+
         g2.drawImage(image, screenX, screenY, null);
+
+        // Reset Alpha
+        g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+
     }
+
 }

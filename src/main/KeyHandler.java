@@ -91,33 +91,33 @@ public class KeyHandler implements KeyListener {
                 } else {
                     checkDrawTime = false;
                 }
+            }
         }
-    }
         // PAUSE STATE
         else if (gp.gameState == gp.pauseState) {
-                if (code == KeyEvent.VK_W) {
-                    gp.ui.commandNumPause--;
-                    if(gp.ui.commandNumPause < 0) {
-                        gp.ui.commandNumPause = 2;
-                    }
+            if (code == KeyEvent.VK_W) {
+                gp.ui.commandNumPause--;
+                if(gp.ui.commandNumPause < 0) {
+                    gp.ui.commandNumPause = 2;
                 }
-                if (code == KeyEvent.VK_S) {
-                    gp.ui.commandNumPause++;
-                    if(gp.ui.commandNumPause > 2) {
-                        gp.ui.commandNumPause = 0;
-                    }
+            }
+            if (code == KeyEvent.VK_S) {
+                gp.ui.commandNumPause++;
+                if(gp.ui.commandNumPause > 2) {
+                    gp.ui.commandNumPause = 0;
                 }
-                if(code == KeyEvent.VK_ENTER) {
-                    if(gp.ui.commandNumPause == 0) {
-                        gp.gameState = gp.playState;
-                    }
-                    if(gp.ui.commandNumPause == 1) {
-                        gp.gameState = gp.playState;
-                    }
-                    if(gp.ui.commandNumPause == 2) {
-                        System.exit(0);
-                    }
+            }
+            if(code == KeyEvent.VK_ENTER) {
+                if(gp.ui.commandNumPause == 0) {
+                    gp.gameState = gp.playState;
                 }
+                if(gp.ui.commandNumPause == 1) {
+                    gp.gameState = gp.playState;
+                }
+                if(gp.ui.commandNumPause == 2) {
+                    System.exit(0);
+                }
+            }
         }
 
         // DIALOGUE STATE

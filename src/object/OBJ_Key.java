@@ -1,22 +1,17 @@
 package object;
 
+import entity.Entity;
 import main.GamePanel;
 
 import javax.imageio.ImageIO;
 import java.io.IOException;
 
-public class OBJ_Key extends SuperObject{
-    GamePanel gp;
-    public OBJ_Key (GamePanel gp) {
-        this.gp = gp;
-        name = "Key";
+public class OBJ_Key extends Entity {
 
-        try {
-            image = ImageIO.read(getClass().getResourceAsStream("/res/objects/key.png"));
-            uTool.scaleImage(image, gp.tileSize, gp.tileSize);
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
+    public OBJ_Key (GamePanel gp) {
+        super(gp);
+        name = "Key";
+        down1 = setup("/objects/key");
         //solidArea.x = 5 //Só faço isso se quiser alterar o valor do tamanho da area solidade um único objeto
     }
 

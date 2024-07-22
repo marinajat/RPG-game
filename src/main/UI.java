@@ -1,12 +1,10 @@
 package main;
 
-import object.OBJ_Key;
+import entity.Entity;
 import object.OBJ_Life;
-import object.SuperObject;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.text.DecimalFormat;
 
 public class UI {
     /* renderiza todas as informações que aparecerão por cima da tela, poderemos usar mensagens de texto
@@ -33,7 +31,7 @@ public class UI {
         arial_50B = new Font("Arial",Font.BOLD, 45);
 
         // Create HUD Object
-        SuperObject life = new OBJ_Life(gp);
+        Entity life = new OBJ_Life(gp);
         heart_full = life.image;
         heart_half = life.image2;
         heart_blank = life.image3;
@@ -186,8 +184,8 @@ public class UI {
         x = getXforCenteredText(text);
         y += gp.tileSize * 3;
         g2.drawString(text, x, y);
-            if(commandNumPause == 0) {
-                g2.drawString(">", x-(gp.tileSize * 1/2), y);
+        if(commandNumPause == 0) {
+            g2.drawString(">", x-(gp.tileSize * 1/2), y);
         }
 
         //Configuracoes
