@@ -48,19 +48,30 @@ public class Player extends Entity {
     }
 
     public void getPlayerImage() {
-        up1 = setup("/player/player_man_up_1");
-        up2 = setup("/player/player_man_up_2");
-        down1 = setup("/player/player_man_down_1");
-        down2 = setup("/player/player_man_down_2");
-        left1 = setup("/player/player_man_left_1");
-        left2 = setup("/player/player_man_left_2");
-        right1 = setup("/player/player_man_right_1");
-        right2 = setup("/player/player_man_right_2");
+        up1 = setup("/player/player_man_up_1", gp.tileSize,gp.tileSize);
+        up2 = setup("/player/player_man_up_2", gp.tileSize,gp.tileSize);
+        down1 = setup("/player/player_man_down_1", gp.tileSize,gp.tileSize);
+        down2 = setup("/player/player_man_down_2", gp.tileSize,gp.tileSize);
+        left1 = setup("/player/player_man_left_1", gp.tileSize,gp.tileSize);
+        left2 = setup("/player/player_man_left_2", gp.tileSize,gp.tileSize);
+        right1 = setup("/player/player_man_right_1", gp.tileSize,gp.tileSize);
+        right2 = setup("/player/player_man_right_2", gp.tileSize,gp.tileSize);
+    }
+
+    public void getPlayerAttackImage() {
+        attackUp1 = setup("/player/player_attack_up_1", gp.tileSize,gp.tileSize*2);
+        attackUp2 = setup("/player/player_attack_up_2", gp.tileSize,gp.tileSize*2);
+        attackDown1 = setup("/player/player_attack_down_1", gp.tileSize,gp.tileSize*2);
+        attackDown2 = setup("/player/player_attack_down_2", gp.tileSize,gp.tileSize*2);
+        attackLeft1 = setup("/player/player_attack_left_1", gp.tileSize*2,gp.tileSize);
+        attackLeft2 = setup("/player/player_attack_left_2", gp.tileSize*2,gp.tileSize);
+        attackRight1 = setup("/player/player_attack_right_1", gp.tileSize*2,gp.tileSize);
+        attackRight2 = setup("/player/player_attack_right_2", gp.tileSize*2,gp.tileSize);
     }
 
     public void update() {
-        if (keyH.downPressed == true || keyH.upPressed == true ||
-                keyH.leftPressed == true || keyH.rightPressed == true) {
+        if (keyH.downPressed || keyH.upPressed ||
+                keyH.leftPressed || keyH.rightPressed || keyH.enterPressed) {
             if (keyH.upPressed) {
                 direction = "up";
             } else if (keyH.downPressed) {
@@ -93,22 +104,16 @@ public class Player extends Entity {
 
             // Se collisionOn for false o player pode se mover
             // primeiro checamos a direção do movimento para só agora checar a colisão
-            if (collisionOn == false) {
+            if (!collisionOn && !keyH.enterPressed) {
                 switch (direction) {
-                    case "up":
-                        worldY -= speed;
-                        break;
-                    case "down":
-                        worldY += speed;
-                        break;
-                    case "left":
-                        worldX -= speed;
-                        break;
-                    case "right":
-                        worldX += speed;
-                        break;
+                    case "up": worldY -= speed;break;
+                    case "down": worldY += speed;break;
+                    case "left": worldX -= speed;break;
+                    case "right": worldX += speed;break;
                 }
             }
+
+            gp.keyH.enterPressed = false;
 
             spriteCounter++;
             if (spriteCounter > 10) {
@@ -120,7 +125,7 @@ public class Player extends Entity {
                 spriteCounter = 0;
             }
         }
-        if(invincible == true) {
+        if(invincible) {
             invincibleCounter ++;
             if(invincibleCounter > 60) {
                 invincible = false;
@@ -147,7 +152,7 @@ public class Player extends Entity {
 
     public void contactMonster(int i) {
         if (i != 999) {
-            if(invincible == false) {
+            if(!invincible) {
                 life -= 1;
                 invincible = true;
             }

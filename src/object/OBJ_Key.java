@@ -11,7 +11,7 @@ public class OBJ_Key extends Entity {
     public OBJ_Key (GamePanel gp) {
         super(gp);
         name = "Key";
-        down1 = setup("/objects/key");
+        down1 = setup("/objects/key", gp.tileSize,gp.tileSize);
         //solidArea.x = 5 //Só faço isso se quiser alterar o valor do tamanho da area solidade um único objeto
     }
 

@@ -9,20 +9,20 @@ public class NPC_Menino extends Entity {
         super(gp);
 
         direction = "down";
-        speed = 1;
+        speed = 0;
         getImage();
         setDialogue();
     }
 
     public void getImage() {
-        up1 = setup("/npc/menino_up_1");
-        up2 = setup("/npc/menino_up_2");
-        down1 = setup("/npc/menino_down_1");
-        down2 = setup("/npc/menino_down_2");
-        left1 = setup("/npc/menino_left_1");
-        left2 = setup("/npc/menino_left_2");
-        right1 = setup("/npc/menino_right_1");
-        right2 = setup("/npc/menino_right_2");
+        up1 = setup("/npc/menino_up_1", gp.tileSize,gp.tileSize);
+        up2 = setup("/npc/menino_up_2", gp.tileSize,gp.tileSize);
+        down1 = setup("/npc/menino_down_1", gp.tileSize,gp.tileSize);
+        down2 = setup("/npc/menino_down_2", gp.tileSize,gp.tileSize);
+        left1 = setup("/npc/menino_left_1", gp.tileSize,gp.tileSize);
+        left2 = setup("/npc/menino_left_2", gp.tileSize,gp.tileSize);
+        right1 = setup("/npc/menino_right_1", gp.tileSize,gp.tileSize);
+        right2 = setup("/npc/menino_right_2", gp.tileSize,gp.tileSize);
     }
 
     public void setDialogue() {
@@ -44,7 +44,7 @@ public class NPC_Menino extends Entity {
         /* aqui tenho um modelo simples de IA em que 25% do tempo ele vai para cada direção:
         direita, cima, esquerda, baixo
          */
-        if (actionLockCounter == 120) {
+    if (actionLockCounter == 120) {
 
             if (i <= 25) {
                 direction = "up";

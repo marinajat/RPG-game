@@ -2,6 +2,7 @@ package main;
 
 import entity.NPC_Et;
 import entity.NPC_Gandalf;
+import entity.NPC_Menino;
 import entity.NPC_OldMan;
 import monster.MON_GreenSlime;
 import object.OBJ_Boots;
@@ -41,6 +42,10 @@ public class AssetSetter {
         gp.npc[4] = new OBJ_Door(gp);
         gp.npc[4].worldX = gp.tileSize*23;
         gp.npc[4].worldY = gp.tileSize*31;
+
+        gp.npc[5] = new NPC_Menino(gp);
+        gp.npc[5].worldX = gp.tileSize*40;
+        gp.npc[5].worldY = gp.tileSize*35;
     }
 
     public void setMonster() {
