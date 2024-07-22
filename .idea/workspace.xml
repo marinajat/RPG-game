@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Adicionei o menu do game e algumas funcionalidades">
-      <change afterPath="$PROJECT_DIR$/src/res/maps/mapa03" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/maps/mapa03-nao-padronizado" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/maps/tiledata-mapa03" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/maps/mapa02-nao-padronizado.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/maps/mapa02-nao-padronizado.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
-    </list>
+    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Adicionei o menu do game e algumas funcionalidades" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +143,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714655979987</updated>
       <workItem from="1721591960457" duration="4909000" />
-      <workItem from="1721657172225" duration="8226000" />
+      <workItem from="1721657172225" duration="8586000" />
     </task>
     <task id="LOCAL-00001" summary="Alterando o formato do mapa para mapa &quot;infinito&quot;">
       <option name="closed" value="true" />
