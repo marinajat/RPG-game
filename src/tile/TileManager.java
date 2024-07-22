@@ -20,7 +20,7 @@ public class TileManager {
         tile = new Tile[50]; // quantidade de imagens para o mapa
         mapTileNum = new int[gp.maxWorldCol][gp.maxWorldRow];
         getTileImage();
-        loadMap("/res/maps/worldV2.txt"); // passando o caminho do mapa como parâmetro
+        loadMap("/res/maps/mapa03"); // passando o caminho do mapa como parâmetro
     }
 
     public void getTileImage() {
@@ -74,7 +74,7 @@ public class TileManager {
 
         //demais tiles
         //tiles para table
-        setup(39,"table01", false);
+        setup(39,"table01", true);
         //tiles para wall
         setup(40,"wall", true);
         //tiles para tree
