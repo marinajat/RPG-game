@@ -39,10 +39,6 @@ public class AssetSetter {
         gp.npc[3].worldX = gp.tileSize*21;
         gp.npc[3].worldY = gp.tileSize*11;
 
-        gp.npc[4] = new OBJ_Door(gp);
-        gp.npc[4].worldX = gp.tileSize*23;
-        gp.npc[4].worldY = gp.tileSize*31;
-
         gp.npc[5] = new NPC_Menino(gp);
         gp.npc[5].worldX = gp.tileSize*40;
         gp.npc[5].worldY = gp.tileSize*35;

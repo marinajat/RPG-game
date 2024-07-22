@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Criei todo a logica de monstros e interações com monstros. Além de eventos que tiram dano e recuperam vida.">
+    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Criando a logica de animação de ataque do Player e como atacar monstros - Parte 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/NPC_Menino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Menino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/maps/mapa02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/maps/mapa02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/MON_GreenSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_GreenSlime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/player_attack_down_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/player_attack_down_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/player_attack_down_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/player_attack_down_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/player_attack_left_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/player_attack_left_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/player_attack_left_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/player_attack_left_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/player_attack_right_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/player_attack_right_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/player_attack_right_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/player_attack_right_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/player_attack_up_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/player_attack_up_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/player/player_attack_up_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/player/player_attack_up_2.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +101,7 @@
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\objects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\player" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\objects" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\player" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\tiles" />
@@ -288,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721653573178</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Criando a logica de animação de ataque do Player e como atacar monstros - Parte 1">
+      <option name="closed" value="true" />
+      <created>1721662737082</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1721662737082</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +333,8 @@
     <MESSAGE value="Criei um sistema de NPCs e uma checagem de colisão entre o NPC e entre o Player. Além de criar uma forma de alterar o estado do jogo, usando o pause &quot;p&quot;" />
     <MESSAGE value="Adicionei o menu do game e algumas funcionalidades" />
     <MESSAGE value="Criei todo a logica de monstros e interações com monstros. Além de eventos que tiram dano e recuperam vida." />
-    <option name="LAST_COMMIT_MESSAGE" value="Criei todo a logica de monstros e interações com monstros. Além de eventos que tiram dano e recuperam vida." />
+    <MESSAGE value="Criando a logica de animação de ataque do Player e como atacar monstros - Parte 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando a logica de animação de ataque do Player e como atacar monstros - Parte 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
