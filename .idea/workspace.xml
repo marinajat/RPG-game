@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Adicionei o menu do game e algumas funcionalidades" />
+    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Criando a logica de animação de ataque do Player e como atacar monstros. Agora é possível matar monstros - Parte 2">
+      <change afterPath="$PROJECT_DIR$/src/res/sound/hitmonster.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/sound/parry.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/sound/receivedamage.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,12 +40,12 @@
     &quot;assignee&quot;: &quot;rafaelmslima&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/marinajat/RPG-game.git&quot;,
-    &quot;accountId&quot;: &quot;5c8894b8-b603-4004-b0a4-84145ae6fc90&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/marinajat/RPG-game.git",
+    "accountId": "5c8894b8-b603-4004-b0a4-84145ae6fc90"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -51,43 +60,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TileManager.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/marin/Desktop/LPOO-jogo/RPG-game&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/rafae/OneDrive/Área de Trabalho/Java/Jogo/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Application.TileManager.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/rafae/IdeaProjects/RPG-game/src/res/sound",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/rafae/OneDrive/Área de Trabalho/Java/Jogo/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\sound" />
       <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\monster" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\player" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\maps" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\objects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\player" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\objects" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\player" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\tiles" />
@@ -126,14 +137,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -143,7 +146,6 @@
       <option name="presentableId" value="Default" />
       <updated>1714655979987</updated>
       <workItem from="1721591960457" duration="4909000" />
-      <workItem from="1721657172225" duration="9190000" />
     </task>
     <task id="LOCAL-00001" summary="Alterando o formato do mapa para mapa &quot;infinito&quot;">
       <option name="closed" value="true" />
@@ -281,7 +283,31 @@
       <option name="project" value="LOCAL" />
       <updated>1721494171077</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Criei todo a logica de monstros e interações com monstros. Além de eventos que tiram dano e recuperam vida.">
+      <option name="closed" value="true" />
+      <created>1721653573178</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1721653573178</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Criando a logica de animação de ataque do Player e como atacar monstros - Parte 1">
+      <option name="closed" value="true" />
+      <created>1721662737082</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1721662737082</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Criando a logica de animação de ataque do Player e como atacar monstros. Agora é possível matar monstros - Parte 2">
+      <option name="closed" value="true" />
+      <created>1721671182275</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1721671182275</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +337,10 @@
     <MESSAGE value="Aprimorei o sistema de NPC colocando caixas de dialogo e interacao entre npc e usuario" />
     <MESSAGE value="Criei um sistema de NPCs e uma checagem de colisão entre o NPC e entre o Player. Além de criar uma forma de alterar o estado do jogo, usando o pause &quot;p&quot;" />
     <MESSAGE value="Adicionei o menu do game e algumas funcionalidades" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionei o menu do game e algumas funcionalidades" />
+    <MESSAGE value="Criei todo a logica de monstros e interações com monstros. Além de eventos que tiram dano e recuperam vida." />
+    <MESSAGE value="Criando a logica de animação de ataque do Player e como atacar monstros - Parte 1" />
+    <MESSAGE value="Criando a logica de animação de ataque do Player e como atacar monstros. Agora é possível matar monstros - Parte 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criando a logica de animação de ataque do Player e como atacar monstros. Agora é possível matar monstros - Parte 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
