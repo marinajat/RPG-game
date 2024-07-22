@@ -1,4 +1,5 @@
 package entity;
+
 import main.GamePanel;
 import main.KeyHandler;
 import main.UtilityTool;
@@ -16,6 +17,7 @@ public class Player extends Entity {
     public final int screenY;
     public int maxLife;
     public int life;
+
     public Player(GamePanel gp, KeyHandler keyH) {
         super(gp);
         this.keyH = keyH;
@@ -32,9 +34,11 @@ public class Player extends Entity {
         setDefaultValues();
         getPlayerImage();
     }
+
     public void setDefaultValues() {
-        worldX = gp.tileSize * 25; //posição default do player.
-        worldY = gp.tileSize * 21; //quero que o player sempre esteja no centro da tela para que possa ter um mapa maior
+        worldX = gp.tileSize * 25; // posição default do player.
+        worldY = gp.tileSize * 21; // quero que o player sempre esteja no centro da tela para que possa ter um mapa
+                                   // maior
         speed = 4;
         direction = "down";
 
@@ -57,7 +61,7 @@ public class Player extends Entity {
     public void update() {
         if (keyH.downPressed == true || keyH.upPressed == true ||
                 keyH.leftPressed == true || keyH.rightPressed == true) {
-            if(keyH.upPressed) {
+            if (keyH.upPressed) {
                 direction = "up";
             } else if (keyH.downPressed) {
                 direction = "down";
@@ -66,26 +70,39 @@ public class Player extends Entity {
             } else if (keyH.rightPressed) {
                 direction = "right";
             }
-            //checando o Tile Collision
+            // checando o Tile Collision
             collisionOn = false;
             gp.cChecker.checkTile(this);
 
-            //checando object collision
-            int objIndex = gp.cChecker.checkObject(this,true);
+            // checando object collision
+            int objIndex = gp.cChecker.checkObject(this, true);
             pickUpObject(objIndex);
 
             // Checando a colisão do NPC
             int npcIndex = gp.cChecker.checkEntity(this, gp.npc);
             interactNPC(npcIndex);
 
+            // Checando os eventos
+            gp.eHandler.checkEvent();
+
+            gp.keyH.enterPressed = false;
+
             // Se collisionOn for false o player pode se mover
             // primeiro checamos a direção do movimento para só agora checar a colisão
-            if (collisionOn == false){
+            if (collisionOn == false) {
                 switch (direction) {
-                    case "up": worldY -= speed;break;
-                    case "down": worldY += speed;break;
-                    case "left": worldX -= speed;break;
-                    case "right": worldX += speed;break;
+                    case "up":
+                        worldY -= speed;
+                        break;
+                    case "down":
+                        worldY += speed;
+                        break;
+                    case "left":
+                        worldX -= speed;
+                        break;
+                    case "right":
+                        worldX += speed;
+                        break;
                 }
             }
 
@@ -100,8 +117,9 @@ public class Player extends Entity {
             }
         }
     }
+
     public void pickUpObject(int i) {
-        if(i != 999) {
+        if (i != 999) {
 
         }
     }
@@ -109,23 +127,22 @@ public class Player extends Entity {
     public void interactNPC(int i) {
         if (i != 999) {
             // Se o index não for 999, significa que o player está tocando em um NPC
-            if(gp.keyH.enterPressed) {
+            if (gp.keyH.enterPressed) {
                 gp.gameState = gp.dialogueState;
                 gp.npc[i].speak();
             }
         }
-        gp.keyH.enterPressed = false;
     }
 
     public void draw(Graphics2D g2) {
 
-     //   g2.setColor(Color.white);
-     //   g2.fillRect(x,y,gp.tileSize,gp.tileSize);
+        // g2.setColor(Color.white);
+        // g2.fillRect(x,y,gp.tileSize,gp.tileSize);
         BufferedImage image = null;
 
         switch (direction) {
             case "up":
-                if(spriteNum == 1) {
+                if (spriteNum == 1) {
                     image = up1;
                 }
                 if (spriteNum == 2) {
@@ -160,5 +177,3 @@ public class Player extends Entity {
         g2.drawImage(image, screenX, screenY, null);
     }
 }
-
-//teste//mqlwkmqlwkmlqkmqlqwm
