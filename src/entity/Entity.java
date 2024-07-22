@@ -31,12 +31,14 @@ public class Entity {
     boolean attacking = false;
     public boolean alive = true;
     public boolean dying = false;
+    boolean hpBarOn = false;
 
     // Counter
     public int spriteCounter = 0;
     public int actionLockCounter = 0;
     public int invincibleCounter = 0;
     int dyingCounter = 0;
+    int hpBarCounter = 0;
 
     // Character Status
     public int maxLife;
@@ -50,6 +52,12 @@ public class Entity {
     public Entity (GamePanel gp) {
         this.gp = gp;
     }
+
+    public void setAction() {
+
+    }
+
+    public void damageReaction () {}
 
     public void draw (Graphics2D g2) {
 
@@ -80,20 +88,34 @@ public class Entity {
                     break;
             }
 
+            // Monster HP Bar
+            if(entityTipe == 2 && hpBarOn == true) {
+                double oneScale = (double)gp.tileSize/maxLife;
+                double hpBarValue = oneScale * life;
 
-            if (dying == true) {
-                dyingAnimation(g2);
-            } else {
-                if(invincible == true) {
-                    g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.3f));
-                } else {
-                    g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+                g2.setColor(new Color(35,35,35));
+                g2.fillRect(screenX -1,screenY - 16, gp.tileSize + 2, 12);
+
+                g2.setColor(new Color(255,0,30));
+                g2.fillRect(screenX,screenY - 15, (int)hpBarValue, 10);
+
+                hpBarCounter ++;
+                if(hpBarCounter > 600) {
+                    hpBarCounter = 0;
+                    hpBarOn = false;
                 }
             }
 
-            g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
-
+            if(invincible == true) {
+                hpBarOn = true;
+                hpBarCounter = 0;
+                changeAlpha(g2, 0.3f);
+            }
+            if (dying == true) {
+                dyingAnimation(g2);
+            }
             g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+            changeAlpha(g2, 1f);
         }
     }
 
@@ -119,10 +141,6 @@ public class Entity {
 
     public void changeAlpha(Graphics2D g2, float alphaValue) {
         g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alphaValue));
-    }
-
-    public void setAction() {
-
     }
     public void speak() {
         if(dialogues[dialogueIndex] == null) {
