@@ -45,7 +45,21 @@ public class Entity {
     public int life;
     public int speed;
     public String name;
-    public int entityTipe; // 0 = player, 1 = npc, 2 = monster
+    public int entityTipe;// 0 = player, 1 = npc, 2 = monster
+    public int attack;
+    public int defense;
+    public int level;
+    public int strength;
+    public int dexterity;
+    public int exp;
+    public int nextLevelExp;
+    public int coin;
+    public Entity currentWeapon;
+    public Entity currentShield;
+
+    // Item Attributes
+    public int attackValue;
+    public int defenseValue;
 
 
 
@@ -54,6 +68,60 @@ public class Entity {
     }
 
     public void setAction() {
+
+    }
+
+    public void update() {
+        setAction(); /* mesmo que o método dessa classe esteja vazio, se a subclasse fez o override
+        dele, o da subclasse tem prioridade */
+        collisionOn = false;
+        gp.cChecker.checkTile(this); // passa a classe chamada como uma entity
+        gp.cChecker.checkObject(this,false);
+        gp.cChecker.checkEntity(this, gp.npc);
+        gp.cChecker.checkEntity(this, gp.monster);
+        gp.cChecker.checkPlayer(this);
+        boolean contactPlayer = gp.cChecker.checkPlayer(this);
+
+        if(this.entityTipe == 2 && contactPlayer == true) {
+            if(gp.player.invincible == false) {
+                gp.playSE(6);
+
+                int damage = attack - gp.player.defense;
+                if(damage < 0) {
+                    damage = 0;
+                }
+                gp.player.life -= damage;
+
+                gp.player.life -= 1;
+                gp.player.invincible = true;
+            }
+        }
+        //se a colisão for falsa a entity pode se mover
+        if(collisionOn == false) {
+            switch (direction) {
+                case "up": worldY -= speed; break;
+                case "down": worldY += speed; break;
+                case "left": worldX -= speed; break;
+                case "right": worldX += speed; break;
+            }
+        }
+
+        spriteCounter ++;
+        if(spriteCounter > 12) {
+            if(spriteNum == 1) {
+                spriteNum = 2;
+            } else if (spriteNum == 2) {
+                spriteNum = 1;
+            }
+            spriteCounter = 0;
+        }
+        if(invincible) {
+            invincibleCounter ++;
+            if(invincibleCounter > 40) {
+                invincible = false;
+                invincibleCounter = 0;
+            }
+        }
 
     }
 
@@ -138,7 +206,6 @@ public class Entity {
             alive = false;
         }
     }
-
     public void changeAlpha(Graphics2D g2, float alphaValue) {
         g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alphaValue));
     }
@@ -163,51 +230,6 @@ public class Entity {
                 direction = "left";
                 break;
         }
-    }
-    public void update() {
-        setAction(); /* mesmo que o método dessa classe esteja vazio, se a subclasse fez o override
-        dele, o da subclasse tem prioridade */
-        collisionOn = false;
-        gp.cChecker.checkTile(this); // passa a classe chamada como uma entity
-        gp.cChecker.checkObject(this,false);
-        gp.cChecker.checkEntity(this, gp.npc);
-        gp.cChecker.checkEntity(this, gp.monster);
-        gp.cChecker.checkPlayer(this);
-        boolean contactPlayer = gp.cChecker.checkPlayer(this);
-
-        if(this.entityTipe == 2 && contactPlayer == true) {
-            if(gp.player.invincible == false) {
-                gp.playSE(6);
-                gp.player.life -= 1;
-                gp.player.invincible = true;
-            }
-        }
-        //se a colisão for falsa a entity pode se mover
-        if(collisionOn == false) {
-            switch (direction) {
-                case "up": worldY -= speed; break;
-                case "down": worldY += speed; break;
-                case "left": worldX -= speed; break;
-                case "right": worldX += speed; break;
-            }
-        }
-        spriteCounter ++;
-        if(spriteCounter > 12) {
-            if(spriteNum == 1) {
-                spriteNum = 2;
-            } else if (spriteNum == 2) {
-                spriteNum = 1;
-            }
-            spriteCounter = 0;
-        }
-        if(invincible) {
-            invincibleCounter ++;
-            if(invincibleCounter > 40) {
-                invincible = false;
-                invincibleCounter = 0;
-            }
-        }
-
     }
     public BufferedImage setup(String imagePath, int width, int height) {
         UtilityTool uTool = new UtilityTool();

@@ -1,6 +1,9 @@
 package main;
 
-import entity.*;
+import entity.NPC_Et;
+import entity.NPC_Gandalf;
+import entity.NPC_Menino;
+import entity.NPC_OldMan;
 import monster.MON_GreenSlime;
 import object.OBJ_Boots;
 import object.OBJ_Chest;
@@ -24,22 +27,21 @@ public class AssetSetter {
         gp.npc[0].worldX = gp.tileSize*21;
         gp.npc[0].worldY = gp.tileSize*21;
 
-        gp.npc[2] = new NPC_Gandalf(gp);
-        gp.npc[2].worldX = gp.tileSize*12;
-        gp.npc[2].worldY = gp.tileSize*35;
+        gp.npc[1] = new NPC_Et(gp);
+        gp.npc[1].worldX = gp.tileSize*11;
+        gp.npc[1].worldY = gp.tileSize*21;
 
-//        gp.npc[3] = new NPC_Fada(gp);
-//        gp.npc[3].worldX = gp.tileSize*36;
-//        gp.npc[3].worldY = gp.tileSize*16;
-//
-//        gp.npc[4] = new NPC_Rei(gp);
-//        gp.npc[4].worldX = gp.tileSize*40;
-//        gp.npc[4].worldY = gp.tileSize*25;
+        gp.npc[2] = new NPC_Gandalf(gp);
+        gp.npc[2].worldX = gp.tileSize*31;
+        gp.npc[2].worldY = gp.tileSize*21;
+
+        gp.npc[3] = new NPC_Et(gp);
+        gp.npc[3].worldX = gp.tileSize*21;
+        gp.npc[3].worldY = gp.tileSize*11;
 
         gp.npc[5] = new NPC_Menino(gp);
-        gp.npc[5].worldX = gp.tileSize*10;
-        gp.npc[5].worldY = gp.tileSize*15;
-
+        gp.npc[5].worldX = gp.tileSize*40;
+        gp.npc[5].worldY = gp.tileSize*35;
     }
 
     public void setMonster() {
@@ -49,16 +51,16 @@ public class AssetSetter {
         gp.monster[0].worldY = gp.tileSize* 23;
         gp.monster[0].worldX = gp.tileSize * 36;
 
-//        gp.monster[1] = new MON_Et(gp);
-//        gp.monster[1].worldX = gp.tileSize*14;
-//        gp.monster[1].worldY = gp.tileSize*21;
-//
-//        gp.monster[2] = new MON_Vampiro(gp);
-//        gp.monster[2].worldX = gp.tileSize*40;
-//        gp.monster[2].worldY = gp.tileSize*42;
-//
-//        gp.monster[2] = new MON_Esqueleto(gp);
-//        gp.monster[2].worldX = gp.tileSize*42;
-//        gp.monster[2].worldY = gp.tileSize*9;
+        gp.monster[1] = new MON_GreenSlime(gp);
+        gp.monster[1].worldY = gp.tileSize* 23;
+        gp.monster[1].worldX = gp.tileSize * 37;
+
+        gp.monster[2] = new MON_GreenSlime(gp);
+        gp.monster[2].worldY = gp.tileSize* 25;
+        gp.monster[2].worldX = gp.tileSize * 37;
+
+        gp.monster[3] = new MON_GreenSlime(gp);
+        gp.monster[3].worldY = gp.tileSize* 27;
+        gp.monster[3].worldX = gp.tileSize * 37;
     }
 }
