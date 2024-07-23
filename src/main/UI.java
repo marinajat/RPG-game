@@ -143,7 +143,7 @@ public class UI {
 
         //Tittle Name
         g2.setFont(g2.getFont().deriveFont(Font.BOLD, 70F));
-        String text = "Guardians' Odyssey";
+        String text = "The Royal Quest";
         int x = getXforCenteredText(text);
         int y = gp.tileSize * 3;
 
