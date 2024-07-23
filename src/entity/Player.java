@@ -46,9 +46,13 @@ public class Player extends Entity {
     }
 
     public void setDefaultValues() {
-        worldX = gp.tileSize * 25; // posição default do player.
-        worldY = gp.tileSize * 21; // quero que o player sempre esteja no centro da tela para que possa ter um mapa
-        // maior
+        worldX = gp.tileSize * 10; // posição default do player.
+        worldY = gp.tileSize * 7; // quero que o player sempre esteja no centro da tela para que possa ter um mapa maior
+        worldX = gp.tileSize * 9; // posição default do player.
+        //para o mundo 2:
+        //worldY = gp.tileSize * 26; 
+        // quero que o player sempre esteja no centro da tela para que possa ter um mapa maior
+        
         speed = 4;
         direction = "down";
 
