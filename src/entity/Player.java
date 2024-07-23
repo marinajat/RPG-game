@@ -275,6 +275,7 @@ public class Player extends Entity {
             maxLife += 2;
             strength++;
             dexterity++;
+            life = maxLife;
             attack = getAttack();
             defense = getDefense();
 

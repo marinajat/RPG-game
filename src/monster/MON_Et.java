@@ -15,8 +15,11 @@ public class MON_Et extends Entity {
         entityTipe = 2;
         name = "ET";
         speed = 1;
-        maxLife = 4;
+        maxLife = 10;
         life = maxLife;
+        attack = 3;
+        defense = 2;
+        exp = 10;
 
         solidArea.x = 3;
         solidArea.y = 18;

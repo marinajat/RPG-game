@@ -1,14 +1,10 @@
 package main;
 
-import entity.NPC_Et;
 import entity.NPC_Gandalf;
 import entity.NPC_Menino;
 import entity.NPC_OldMan;
+import monster.MON_Et;
 import monster.MON_GreenSlime;
-import object.OBJ_Boots;
-import object.OBJ_Chest;
-import object.OBJ_Door;
-import object.OBJ_Key;
 
 public class AssetSetter {
 
@@ -27,17 +23,9 @@ public class AssetSetter {
         gp.npc[0].worldX = gp.tileSize*21;
         gp.npc[0].worldY = gp.tileSize*21;
 
-        gp.npc[1] = new NPC_Et(gp);
-        gp.npc[1].worldX = gp.tileSize*11;
-        gp.npc[1].worldY = gp.tileSize*21;
-
         gp.npc[2] = new NPC_Gandalf(gp);
         gp.npc[2].worldX = gp.tileSize*31;
         gp.npc[2].worldY = gp.tileSize*21;
-
-        gp.npc[3] = new NPC_Et(gp);
-        gp.npc[3].worldX = gp.tileSize*21;
-        gp.npc[3].worldY = gp.tileSize*11;
 
         gp.npc[5] = new NPC_Menino(gp);
         gp.npc[5].worldX = gp.tileSize*40;
@@ -62,5 +50,9 @@ public class AssetSetter {
         gp.monster[3] = new MON_GreenSlime(gp);
         gp.monster[3].worldY = gp.tileSize* 27;
         gp.monster[3].worldX = gp.tileSize * 37;
+
+        gp.monster[4] = new MON_Et(gp);
+        gp.monster[4].worldY = gp.tileSize* 28;
+        gp.monster[4].worldX = gp.tileSize * 38;
     }
 }
