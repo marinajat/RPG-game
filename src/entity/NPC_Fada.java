@@ -4,33 +4,31 @@ import main.GamePanel;
 
 import java.util.Random;
 
-public class NPC_Guerreiro extends Entity {
-    public NPC_Guerreiro(GamePanel gp) {
+public class NPC_Fada extends Entity {
+    public NPC_Fada(GamePanel gp) {
         super(gp);
 
         direction = "down";
-        speed = 1;
+        speed = 0;
         getImage();
         setDialogue();
     }
 
     public void getImage() {
-        up1 = setup("/npc/guerreiro_up_1", gp.tileSize,gp.tileSize);
-        up2 = setup("/npc/guerreiro_up_2", gp.tileSize,gp.tileSize);
-        down1 = setup("/npc/guerreiro_down_1", gp.tileSize,gp.tileSize);
-        down2 = setup("/npc/guerreiro_down_2", gp.tileSize,gp.tileSize);
-        left1 = setup("/npc/guerreiro_left_1", gp.tileSize,gp.tileSize);
-        left2 = setup("/npc/guerreiro_left_2", gp.tileSize,gp.tileSize);
-        right1 = setup("/npc/guerreiro_right_1", gp.tileSize,gp.tileSize);
-        right2 = setup("/npc/guerreiro_right_2", gp.tileSize,gp.tileSize);
+        up1 = setup("/npc/fada_up_1", gp.tileSize,gp.tileSize);
+        up2 = setup("/npc/fada_up_2", gp.tileSize,gp.tileSize);
+        down1 = setup("/npc/fada_down_1", gp.tileSize,gp.tileSize);
+        down2 = setup("/npc/fada_down_2", gp.tileSize,gp.tileSize);
+        left1 = setup("/npc/fada_left_1", gp.tileSize,gp.tileSize);
+        left2 = setup("/npc/fada_left_2", gp.tileSize,gp.tileSize);
+        right1 = setup("/npc/fada_right_1", gp.tileSize,gp.tileSize);
+        right2 = setup("/npc/fada_right_2", gp.tileSize,gp.tileSize);
     }
 
     public void setDialogue() {
         // Guardando textos de dialogos
-        dialogues[0] = "Hello, lad.";
-        dialogues[1] = "So you've come to this island/nto find the treasure?";
-        dialogues[2] = "I used to be a great wizard but now.../nI'm a bit too old for taking an adventure.";
-        dialogues[3] = "Well, good luck on you";
+        dialogues[0] = "Bem-vindo, herói. Eu sinto a coragem em seu coração.";
+        dialogues[1] = "O esqueleto guarda uma das chaves na caverna. Derrote-o para obtê-la.";
 
     }
 

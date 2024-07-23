@@ -9,7 +9,7 @@ public class NPC_Menino extends Entity {
         super(gp);
 
         direction = "down";
-        speed = 0;
+        speed = 1;
         getImage();
         setDialogue();
     }
@@ -27,10 +27,8 @@ public class NPC_Menino extends Entity {
 
     public void setDialogue() {
         // Guardando textos de dialogos
-        dialogues[0] = "Hello, lad.";
-        dialogues[1] = "So you've come to this island/nto find the treasure?";
-        dialogues[2] = "I used to be a great wizard but now.../nI'm a bit too old for taking an adventure.";
-        dialogues[3] = "Well, good luck on you";
+        dialogues[0] = "Olá, senhor! Você está aqui para salvar/na princesa, não está?";
+        dialogues[1] = "Eu ouvi dizer que a fada na floresta/nsabe algo importante. Você deveria/nfalar com ela.";
 
     }
 

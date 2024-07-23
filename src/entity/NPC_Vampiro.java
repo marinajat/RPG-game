@@ -27,10 +27,7 @@ public class NPC_Vampiro extends Entity {
 
     public void setDialogue() {
         // Guardando textos de dialogos
-        dialogues[0] = "Hello, lad.";
-        dialogues[1] = "So you've come to this island/nto find the treasure?";
-        dialogues[2] = "I used to be a great wizard but now.../nI'm a bit too old for taking an adventure.";
-        dialogues[3] = "Well, good luck on you";
+        dialogues[0] = "Você chegou longe, mas seu caminho termina aqui. Prepare-se para lutar!";
 
     }
 
