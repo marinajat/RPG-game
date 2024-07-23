@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Melhorei a SolidArea do player para que ele não fique travado em locais com passagem pequena">
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Shield_Wood.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/objects/shield_wood.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/objects/sword_normal.png" afterDir="false" />
+    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Criei a tela de Status do Character player">
+      <change afterPath="$PROJECT_DIR$/src/res/sound/levelup.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/monster/MON_GreenSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_GreenSlime.java" afterDir="false" />
     </list>
@@ -78,7 +74,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/rafae/IdeaProjects/RPG-game/src/res/objects",
+    "last_opened_file_path": "C:/Users/rafae/IdeaProjects/RPG-game/src/res/sound",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,8 +90,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\objects" />
       <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\sound" />
+      <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\objects" />
       <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\monster" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\player" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\maps" />
@@ -334,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721689506570</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Criei a tela de Status do Character player">
+      <option name="closed" value="true" />
+      <created>1721695087043</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1721695087043</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +374,8 @@
     <MESSAGE value="Adicionando efeitos sonoros" />
     <MESSAGE value="Adicionei efeitos sonoros na batalha e sistema para que a vida dos monstros apareça quando o combate iniciar" />
     <MESSAGE value="Melhorei a SolidArea do player para que ele não fique travado em locais com passagem pequena" />
-    <option name="LAST_COMMIT_MESSAGE" value="Melhorei a SolidArea do player para que ele não fique travado em locais com passagem pequena" />
+    <MESSAGE value="Criei a tela de Status do Character player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criei a tela de Status do Character player" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

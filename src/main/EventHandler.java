@@ -73,6 +73,7 @@ public class EventHandler {
             gp.gameState = gameState;
             gp.ui.currentDialogue = "Vida Recuperada!";
             gp.player.life = gp.player.maxLife;
+            gp.aSetter.setMonster();
         }
     }
     public void teleport(int gameState) {
