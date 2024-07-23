@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Adicionei efeitos sonoros na batalha e sistema para que a vida dos monstros apareça quando o combate iniciar" />
+    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Melhorei a SolidArea do player para que ele não fique travado em locais com passagem pequena">
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Shield_Wood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/objects/shield_wood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/objects/sword_normal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/monster/MON_GreenSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/monster/MON_GreenSlime.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +78,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/rafae/IdeaProjects/RPG-game/src/res/sound",
+    "last_opened_file_path": "C:/Users/rafae/IdeaProjects/RPG-game/src/res/objects",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,18 +94,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\objects" />
       <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\sound" />
       <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\monster" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\player" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\maps" />
-      <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\objects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\objects" />
       <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\player" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\objects" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\player" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\tiles" />
-      <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="monster" />
@@ -314,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721678998515</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Melhorei a SolidArea do player para que ele não fique travado em locais com passagem pequena">
+      <option name="closed" value="true" />
+      <created>1721689506570</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1721689506570</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +369,8 @@
     <MESSAGE value="Criando a logica de animação de ataque do Player e como atacar monstros. Agora é possível matar monstros - Parte 2" />
     <MESSAGE value="Adicionando efeitos sonoros" />
     <MESSAGE value="Adicionei efeitos sonoros na batalha e sistema para que a vida dos monstros apareça quando o combate iniciar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionei efeitos sonoros na batalha e sistema para que a vida dos monstros apareça quando o combate iniciar" />
+    <MESSAGE value="Melhorei a SolidArea do player para que ele não fique travado em locais com passagem pequena" />
+    <option name="LAST_COMMIT_MESSAGE" value="Melhorei a SolidArea do player para que ele não fique travado em locais com passagem pequena" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

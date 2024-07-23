@@ -3,6 +3,8 @@ package entity;
 import main.GamePanel;
 import main.KeyHandler;
 import main.UtilityTool;
+import object.OBJ_Shield_Wood;
+import object.OBJ_Sword_Normal;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -17,6 +19,7 @@ public class Player extends Entity {
     public final int screenY;
     public int maxLife;
     public int life;
+    public boolean attackCanceled = false;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         super(gp);
@@ -26,7 +29,7 @@ public class Player extends Entity {
 
         solidArea = new Rectangle();
         solidArea.x = 5;
-        solidArea.y = 8;
+        solidArea.y = 5;
         solidAreaDefaultX = solidArea.x;
         solidAreaDefaultY = solidArea.y; // guardando os valores default pois irei trocar os valores x e y depois
         solidArea.width = 32;
@@ -48,8 +51,25 @@ public class Player extends Entity {
         direction = "down";
 
         // Player Status
+        level = 1;
         maxLife = 6;
         life = maxLife;
+        strength = 1;
+        dexterity = 1;
+        exp = 0;
+        nextLevelExp = 5;
+        currentWeapon = new OBJ_Sword_Normal(gp);
+        currentShield = new OBJ_Shield_Wood(gp);
+        attack = getAttack();
+        defense = getDefense();
+    }
+
+    public int getAttack() {
+        return attack = strength * currentWeapon.attackValue;
+    }
+
+    public int getDefense () {
+        return defense = dexterity * currentShield.defenseValue;
     }
 
     public void getPlayerImage() {
@@ -200,9 +220,9 @@ public class Player extends Entity {
                 gp.gameState = gp.dialogueState;
                 gp.npc[i].speak();
             } else {
-                    gp.playSE(7);
-                    attacking = true;
-        }
+                gp.playSE(7);
+                attacking = true;
+            }
         }
     }
 
@@ -210,7 +230,12 @@ public class Player extends Entity {
         if (i != 999) {
             if(!invincible) {
                 gp.playSE(6);
-                life -= 1;
+
+                int damage = gp.monster[i].attack - defense;
+                if(damage < 0) {
+                    damage = 0;
+                }
+                life -= damage;
                 invincible = true;
             }
         }
@@ -221,7 +246,13 @@ public class Player extends Entity {
 
             if (gp.monster[i].invincible == false) {
                 gp.playSE(5);
-                gp.monster[i].life -= 1;
+
+                int damage = attack - gp.monster[i].defense;
+                if(damage < 0) {
+                    damage = 0;
+                }
+
+                gp.monster[i].life -= damage;
                 gp.monster[i].invincible = true;
                 gp.monster[i].damageReaction();
 

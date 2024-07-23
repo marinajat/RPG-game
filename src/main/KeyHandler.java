@@ -24,14 +24,33 @@ public class KeyHandler implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode(); //retorna o numero da tecla que foi pressionada
-
-        //TitleState
-        /*
-        Continuar [0]
-        novo jogo [1]
-        configuracoes [2]
-         */
+        // TitleState
         if(gp.gameState == gp.titleState) {
+            titleState(code);
+        }
+
+        //PlayState
+        else if (gp.gameState == gp.playState) {
+            playState(code);
+        }
+
+        //PauseState
+        else if (gp.gameState == gp.pauseState) {
+            pauseState(code);
+        }
+
+         //DialogueState
+        else if(gp.gameState == gp.dialogueState) {
+            dialogueState(code);
+        }
+
+        //CharacterState
+        if (gp.gameState == gp.characterState) {
+            characterState(code);
+        }
+    }
+
+    public void titleState (int code) {
             if (code == KeyEvent.VK_W) {
                 gp.ui.commandNum--;
                 if(gp.ui.commandNum < 0) {
@@ -59,10 +78,11 @@ public class KeyHandler implements KeyListener {
                     System.exit(0);
                 }
             }
-        }
 
+    }
+
+    public void playState (int code) {
         // PlayState
-        if (gp.gameState == gp.playState) {
             if (code == KeyEvent.VK_W) {
                 upPressed = true;
             }
@@ -79,22 +99,17 @@ public class KeyHandler implements KeyListener {
                 enterPressed = true;
             }
 
+            if (code == KeyEvent.VK_C) {
+                gp.gameState = gp.characterState;
+            }
+
             if(code == KeyEvent.VK_P) {
                 gp.gameState = gp.pauseState;
-            }
-
-
-            // ativar o DEBUG metod
-            if (code == KeyEvent.VK_T) {
-                if(checkDrawTime == false) {
-                    checkDrawTime = true;
-                } else {
-                    checkDrawTime = false;
-                }
-            }
         }
+    }
+
+    public void pauseState(int code) {
         // PAUSE STATE
-        else if (gp.gameState == gp.pauseState) {
             if (code == KeyEvent.VK_W) {
                 gp.ui.commandNumPause--;
                 if(gp.ui.commandNumPause < 0) {
@@ -116,17 +131,20 @@ public class KeyHandler implements KeyListener {
                 }
                 if(gp.ui.commandNumPause == 2) {
                     System.exit(0);
-                }
             }
         }
+    }
 
-        // DIALOGUE STATE
-        else if(gp.gameState == gp.dialogueState) {
+    public void dialogueState (int code) {
             if(code == KeyEvent.VK_SPACE) {
                 gp.gameState = gp.playState;
             }
-        }
+    }
 
+    public void characterState(int code) {
+            if(code == KeyEvent.VK_ESCAPE) {
+                gp.gameState = gp.playState;
+        }
     }
 
     @Override
