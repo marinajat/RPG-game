@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Resolvido problema do et">
-      <change afterPath="$PROJECT_DIR$/src/res/sound/cursor.wav" afterDir="false" />
+    <list default="true" id="37c5e1b4-28ba-459c-b6ba-bd48644fcbe6" name="Changes" comment="Inventorio e descrição de itens no inventorio">
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Axe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/objects/axe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/objects/shield_blue.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Shield_Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Shield_Wood.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Sword_Normal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,39 +60,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TileManager.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rafae/IdeaProjects/RPG-game/src/res/sound&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/rafae/OneDrive/Área de Trabalho/Java/Jogo/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Application.TileManager.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/rafae/IdeaProjects/RPG-game/src/res/objects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/rafae/OneDrive/Área de Trabalho/Java/Jogo/src/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\sound" />
       <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\objects" />
+      <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\sound" />
       <recent name="C:\Users\rafae\IdeaProjects\RPG-game\src\res\monster" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\player" />
       <recent name="C:\Users\rafae\OneDrive\Área de Trabalho\Java\Jogo\src\res\maps" />
@@ -349,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721705732810</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Inventorio e descrição de itens no inventorio">
+      <option name="closed" value="true" />
+      <created>1721708634514</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1721708634514</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +393,8 @@
     <MESSAGE value="Melhorei a SolidArea do player para que ele não fique travado em locais com passagem pequena" />
     <MESSAGE value="Criei a tela de Status do Character player" />
     <MESSAGE value="Resolvido problema do et" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resolvido problema do et" />
+    <MESSAGE value="Inventorio e descrição de itens no inventorio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inventorio e descrição de itens no inventorio" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -402,7 +409,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/UI.java</url>
-          <line>434</line>
+          <line>447</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">

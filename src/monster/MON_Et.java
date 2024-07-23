@@ -12,7 +12,7 @@ public class MON_Et extends Entity {
 
         this.gp = gp;
 
-        entityTipe = 2;
+        entityTipe = type_monster;
         name = "ET";
         speed = 1;
         maxLife = 10;

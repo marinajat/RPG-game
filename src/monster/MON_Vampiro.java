@@ -12,11 +12,14 @@ public class MON_Vampiro extends Entity {
 
         this.gp = gp;
 
-        entityTipe = 2;
+        entityTipe = type_monster;
         name = "Vampiro";
         speed = 1;
-        maxLife = 4;
+        maxLife = 20;
         life = maxLife;
+        attack = 8;
+        defense = 3;
+        exp = 30;
 
         solidArea.x = 3;
         solidArea.y = 18;

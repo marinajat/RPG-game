@@ -39,9 +39,6 @@ public class Player extends Entity {
         solidArea.width = 32;
         solidArea.height = 32;
 
-        attackArea.width = 48;
-        attackArea.height = 48;
-
         setDefaultValues();
         getPlayerImage();
         getPlayerAttackImage();
@@ -77,6 +74,7 @@ public class Player extends Entity {
     }
 
     public int getAttack() {
+        attackArea = currentWeapon.attackArea;
         return attack = strength * currentWeapon.attackValue;
     }
 
@@ -223,6 +221,17 @@ public class Player extends Entity {
     public void pickUpObject(int i) {
         if (i != 999) {
 
+            String text;
+
+            if(inventory.size() != maxinventorySize) {
+                inventory.add(gp.obj[i]);
+                gp.playSE(1);
+                text = "Pegou um " + gp.obj[i].name + "!";
+            } else {
+                text = "Inventário cheio";
+            }
+            gp.ui.addMessage(text);
+            gp.obj[i] = null;
         }
     }
 
@@ -294,6 +303,26 @@ public class Player extends Entity {
             gp.playSE(8);
             gp.gameState = gp.dialogueState;
             gp.ui.currentDialogue = "Subiu para o nível " + " agora!";
+        }
+    }
+    public void selectItem() {
+        int itemIndex = gp.ui.getItemIndexOnSlot();
+
+        if(itemIndex < inventory.size()) {
+            Entity selectedItem = inventory.get(itemIndex);
+
+            if(selectedItem.entityTipe == type_sword || selectedItem.entityTipe == type_axe) {
+                currentWeapon = selectedItem;
+                attack = getAttack();
+            }
+            if(selectedItem.entityTipe == type_shield) {
+                currentShield = selectedItem;
+                defense = getDefense();
+            }
+            if (selectedItem.entityTipe == type_consumable) {
+                //depois
+            }
+
         }
     }
 

@@ -5,6 +5,8 @@ import entity.NPC_Menino;
 import entity.NPC_OldMan;
 import monster.MON_Et;
 import monster.MON_GreenSlime;
+import object.OBJ_Axe;
+import object.OBJ_Key;
 
 public class AssetSetter {
 
@@ -15,7 +17,17 @@ public class AssetSetter {
     }
 
     public void setObject () {
+        gp.obj[0] = new OBJ_Key(gp);
+        gp.obj[0].worldX = gp.tileSize*25;
+        gp.obj[0].worldY = gp.tileSize*24;
 
+        gp.obj[1] = new OBJ_Key(gp);
+        gp.obj[1].worldX = gp.tileSize*21;
+        gp.obj[1].worldY = gp.tileSize*20;
+
+        gp.obj[2] = new OBJ_Axe(gp);
+        gp.obj[2].worldX = gp.tileSize*26;
+        gp.obj[2].worldY = gp.tileSize*22;
     }
 
     public void setNPC() {
